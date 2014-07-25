@@ -53,11 +53,13 @@ tcpdump -n -i eth0
 tcpdump -i eth0 tcp 
 ```
 - Trên là ví dụ về việc thu thập gói tin tcp, udp, icmp ...
+
 #### Thu thập gọi tin theo port
 - Để thực hiện thu thập gói tin dựa vào port ta sử dụng tùy chọn `port` trong lệnh, ví dụ dưới thực hiện thu thập các gói tin có port 22. 
 ```sh
 tcpdump -i eth0 port 22
-``
+```
+
 #### Thu thập gói tin dựa vào địa chỉ nguồn với tùy chọn `src (source)` và dựa vào địa chỉ đích với tùy chọn `dst destination`. Ví dụ:
 ```sh
 tcpdump -i eth0 src 192.168.1.10

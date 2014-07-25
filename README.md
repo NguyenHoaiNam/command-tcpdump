@@ -18,6 +18,12 @@ Kết quả của lệnh tcpdump được lưu với đuôi là pcap, file này 
 Đối với CENTOS : `yum install tcpdump -y`
 Đối với UBUNTU : `apt-get install tcmdump -y`
 ```
+### Các ví dụ sử dụng với tcpdump
+#### Thu thập các gói tin từ card mạng cụ thể
+```
+tcpdump -i eth0
+```
+Lệnh trên trên sẽ thu thập các gói tin đi qua card mạng có tên là eth0, nhờ tùy chọn  `-i`.
 
 
 

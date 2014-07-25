@@ -40,7 +40,7 @@ tcpdump -w dulieuthuthap.pcap -i eth0
 #### Đọc file `pcap` bằng tcpdump
 ```sh
 tcpdump -r dulieuthuthap.pcap
-
+```
 #### Thu thập dữ liệu bằng địa chỉ IP của card mạng.
 - Thông thường khi thu thập dữ liệu, trên màn hình sẽ hiển thị hostname của máy, nếu muốn hiển thị `ip address` ta sử dụng tùy chọn `n`.
 ```sh

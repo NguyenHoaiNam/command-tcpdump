@@ -12,10 +12,10 @@ Lệnh tcmdump là công cụ thăm dò và phân tích các gói tin trong mộ
 Kết quả của lệnh tcpdump được lưu với đuôi là pcap, file này có thể mở bằng công cụ đồ họa wireshark.
 
 ### Cài đặt 
-- `tcpdump` thường sẽ có sẵn trong các distro ubuntu, centos ...(linux). Nếu chưa có thực hiện lệnh dưới để cài đặt
+- `tcpdump` thường sẽ có sẵn trong các distro ubuntu, centos ...(linux). Nếu chưa có thực hiện lệnh dưới để cài đặt:
 
-> Đối với CENTOS : `yum install tcpdump -y`
-> Đối với UBUNTU : `apt-get install tcmdump -y`
+> - Đối với CENTOS : `yum install tcpdump -y`
+> - Đối với UBUNTU : `apt-get install tcmdump -y`
 
 
 

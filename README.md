@@ -60,7 +60,8 @@ tcpdump -i eth0 tcp
 tcpdump -i eth0 port 22
 ```
 
-#### Thu thập gói tin dựa vào địa chỉ nguồn với tùy chọn `src (source)` và dựa vào địa chỉ đích với tùy chọn `dst destination`. Ví dụ:
+#### Thu thập gói tin dựa vào địa chỉ nguồn và địa chỉ đích
+- Thu thập gói tin dựa vào địa chỉ nguồn với tùy chọn `src (source)` và dựa vào địa chỉ đích với tùy chọn `dst destination`. Ví dụ:
 ```sh
 tcpdump -i eth0 src 192.168.1.10
 ```

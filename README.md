@@ -13,6 +13,7 @@ Kết quả của lệnh tcpdump được lưu với đuôi là pcap, file này 
 
 ### Cài đặt 
 - `tcpdump` thường sẽ có sẵn trong các distro ubuntu, centos ...(linux). Nếu chưa có thực hiện lệnh dưới để cài đặt
+
 > Đối với CENTOS : `yum install tcpdump -y`
 > Đối với UBUNTU : `apt-get install tcmdump -y`
 

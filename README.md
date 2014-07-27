@@ -19,48 +19,48 @@ Kết quả của lệnh tcpdump được lưu với đuôi là pcap, file này 
 Đối với UBUNTU : apt-get install tcmdump -y
 ```
 ### Các ví dụ sử dụng với tcpdump
-#### Thu thập các gói tin từ card mạng cụ thể
+#### 1. Thu thập các gói tin từ card mạng cụ thể
 ```sh
 tcpdump -i eth0
 ```
 Lệnh trên trên sẽ thu thập các gói tin đi qua card mạng có tên là eth0, nhờ tùy chọn  `-i`.
 
-#### Thu thập số gói tin chỉ định (ví dụ 9 gói)
+#### 2. Thu thập số gói tin chỉ định (ví dụ 9 gói)
 ```sh
 tcpdump -c 9 -i eth0
 ```
 - Tùy chọn `-c 9` sẽ chỉ thị rằng tcpdump sẽ thu thập 9 gói tin đầu tiên khi bắt đầu thực hiện lệnh trên card eth0. 
 
-#### Thu thập và lưu dữ liệu thu thập thành file
+#### 3. Thu thập và lưu dữ liệu thu thập thành file
 - Thông thường kết quả của lệnh tcpdump sẽ hiển thi ra màn hình, nếu muốn lưu kết quả này thành file để đọc bởi các chương trình đồ họa (Wireshark) ta thêm thông số `-w` khi thực thi lệnh.
 ```sh
 tcpdump -w dulieuthuthap.pcap -i eth0
 ```
 
-#### Đọc file `pcap` bằng tcpdump
+#### 4. Đọc file `pcap` bằng tcpdump
 ```sh
 tcpdump -r dulieuthuthap.pcap
 ```
-#### Thu thập dữ liệu bằng địa chỉ IP của card mạng.
+#### 5. Thu thập dữ liệu bằng địa chỉ IP của card mạng.
 - Thông thường khi thu thập dữ liệu, trên màn hình sẽ hiển thị hostname của máy, nếu muốn hiển thị `ip address` ta sử dụng tùy chọn `n`.
 ```sh
 tcpdump -n -i eth0
 ```
 ![Alt text](http://i.imgur.com/Ui5MyFZ.png)
 
-#### Thu thập gói tin dựa vào loại gói tin
+#### 6. Thu thập gói tin dựa vào loại gói tin
 ```sh
 tcpdump -i eth0 tcp 
 ```
 - Trên là ví dụ về việc thu thập gói tin tcp, udp, icmp ...
 
-#### Thu thập gọi tin theo port
+#### 7. Thu thập gọi tin theo port
 - Để thực hiện thu thập gói tin dựa vào port ta sử dụng tùy chọn `port` trong lệnh, ví dụ dưới thực hiện thu thập các gói tin có port 22. 
 ```sh
 tcpdump -i eth0 port 22
 ```
 
-#### Thu thập gói tin dựa vào địa chỉ nguồn và địa chỉ đích
+#### 8. Thu thập gói tin dựa vào địa chỉ nguồn và địa chỉ đích
 - Thu thập gói tin dựa vào địa chỉ nguồn với tùy chọn `src (source)` và dựa vào địa chỉ đích với tùy chọn `dst (destination)`. Ví dụ:
 ```sh
 tcpdump -i eth0 src 192.168.1.10
@@ -69,7 +69,18 @@ tcpdump -i eth0 src 192.168.1.10
 tcpdump -i eth0 dst 203.160.181.1
 ```
 
+#### 9. Kết hợp nhiều tùy chọn trong lệnh `tcmdump`
+- Kết hợp địa chỉ nguồn `dst` và `port` khi thu thập các gói tin
+```sh
+tcpdump -w dulieuthuthap.pcap -i eth0 dst 16.181.170.246 and port 22
+```
 
+#### 10. Liệt kê các card mạng bằng `tcpdump`
+```sh
+tcpdump -D
+```
+### Nguồn tham khảo
+- http://www.tecmint.com/12-tcpdump-commands-a-network-sniffer-tool/
 
 
 
